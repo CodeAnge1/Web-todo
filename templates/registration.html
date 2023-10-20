@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../static/styles/login.css">
+    <link rel="stylesheet" href="../static/styles/registration.css">
     <script src="../static/scripts/reg-login.js"></script>
 </head>
 <body>
     <div class="login-form">
-        <h1>Login</h1>
+        <h1>Registration</h1>
         <form>
             <div class="input-field">
                 <input class="data" type="text" id="username" required="">
-                <label>Login</label>
+                <label>Username</label>
+            </div>
+            <div class="input-field">
+                <input class="data" type="email" id="mail" required="" onchange=check_email_field()>
+                <label id="mail-label">Email</label>
             </div>
             <div class="input-field">
                 <input class="data" type="password" id="password" required="">
                 <label>Password</label>
             </div>
+            <div class="input-field">
+                <input class="data" type="password" id="password-again" required="">
+                <label>Repeat your password</label>
+            </div>
             <div class="password-checkbox">
-                <label id="pass-label"><input type="checkbox" onclick=show_password()> Show password</label>
+                <label><input type="checkbox" onclick=show_password()> Показать пароль</label>
             </div>
             <input type="submit" value="Login">
         </form>
